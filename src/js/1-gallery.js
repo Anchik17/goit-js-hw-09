@@ -95,10 +95,6 @@ const images = [
 
   container.insertAdjacentHTML("beforeend", createImg(images));
 
-  const localStorageImg = localStorage.getItem(
-    "createImg", JSON.stringify("createImg"));
-
-console.log(localStorageImg);
 
 const lightbox = new SimpleLightbox(".gallery a", {
     caption: true,
