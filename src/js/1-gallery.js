@@ -80,8 +80,9 @@ const images = [
     }
   }
 
-  const createImg = images.map(({ preview, original, description }) => {
-    return `
+  function createImg(arr) {
+     return arr.map(({ preview, original, description }) => 
+     `
     <li class = "item gallery-item">
     <a class="gallery-link" href="${original}" >
         <img
@@ -89,9 +90,10 @@ const images = [
         src="${preview}"
         alt="${description}"  
         />
+    </a>
     </li>
-    `
-  }).join("");
+    `).join("");
+}
 
   container.insertAdjacentHTML("beforeend", createImg(images));
 
