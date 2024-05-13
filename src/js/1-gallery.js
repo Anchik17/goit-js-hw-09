@@ -71,15 +71,6 @@ const images = [
 
   const container = document.querySelector(".gallery");
 
-  container.addEventListener("click", handleClick);
-
-  function handleClick(event) {
-    event.preventDefault();
-    if (event.target === event.currentTarrget) {
-        return;
-    }
-  }
-
   function createImg(arr) {
      return arr.map(({ preview, original, description }) => 
      `
